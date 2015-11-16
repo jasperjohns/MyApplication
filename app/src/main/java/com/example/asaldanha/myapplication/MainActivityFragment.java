@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.displayjoke.DisplayJokeActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -50,9 +51,17 @@ public class MainActivityFragment extends Fragment {
                 mString = jsonString;
                 mError = e;
                 Toast.makeText(getActivity(), mString, Toast.LENGTH_LONG).show();
+                if (mString.length() > 0) {
+                    Intent intent = new Intent(getActivity(), DisplayJokeActivity.class);
+                    intent.putExtra(DisplayJokeActivity.JOKE_KEY, mString);
+                    startActivity(intent);
+                }
+
+
 
             }
         }).execute("Manfred2");
+
 
 
 
