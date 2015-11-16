@@ -55,23 +55,6 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
 
 
 
-/*
-        epAyncTask = new EndpointsAsyncTask();
-        epAyncTask.setListener(new EndpointsAsyncTask.EndpointsListener() {
-            @Override
-            public void onComplete(String jsonString, Exception e) {
-                mJsonString = jsonString;
-                mError = e;
-                signal.countDown();
-            }
-        }).execute(new Pair<Context, String>(this));
-        signal.await();
-
-//       signal.await(30, TimeUnit.SECONDS);
-
-//        assertTrue( "assert something meaningful here", true );
-        assertEquals(1, 1);
-*/
     }
 
 
