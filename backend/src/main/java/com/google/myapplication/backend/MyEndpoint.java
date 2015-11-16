@@ -9,9 +9,8 @@ package com.google.myapplication.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-
 import javax.inject.Named;
-
+import com.example.jokeTeller;
 /**
  * An endpoint class we are exposing
  */
@@ -24,7 +23,13 @@ public class MyEndpoint {
     @ApiMethod(name = "sayHi")
     public MyBean sayHi(@Named("name") String name) {
         MyBean response = new MyBean();
-        response.setData("Hi, " + name);
+//        response.setData("Hi, " + name);
+
+        jokeTeller joker = new jokeTeller();
+        String joke= joker.getJoke();
+        response.setData(joke);
+
+
 
         return response;
     }

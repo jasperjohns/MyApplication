@@ -31,7 +31,7 @@ public class MainActivityFragment extends Fragment {
     EndpointsAsyncTask epAyncTask;
     EndpointsAsyncTask2 epAyncTask2;
     CountDownLatch signal;
-    String mJsonString = null;
+    String mString = null;
     Exception mError = null;
 
 
@@ -47,40 +47,19 @@ public class MainActivityFragment extends Fragment {
         epAyncTask2.setListener(new EndpointsAsyncTask2.EndpointsListener2() {
             @Override
             public void onComplete(String jsonString, Exception e) {
-                mJsonString = jsonString;
+                mString = jsonString;
                 mError = e;
-//                signal.countDown();
-                Toast.makeText(getActivity(), mJsonString, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), mString, Toast.LENGTH_LONG).show();
 
             }
         }).execute("Manfred2");
 
 
 
-/*
-        epAyncTask = new EndpointsAsyncTask();
-        epAyncTask.setListener(new EndpointsAsyncTask.EndpointsListener() {
-            @Override
-            public void onComplete(String jsonString, Exception e) {
-                mJsonString = jsonString;
-                mError = e;
-//                signal.countDown();
-            }
-        }).execute(new Pair<Context, String>(getActivity(), "Manfred"));
-*/
 
 
 
 
-/*
-        try {
-            signal.await();
-
-        } catch (InterruptedException name) {
-
-        }
-
-*/
 
 
 
