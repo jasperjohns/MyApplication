@@ -48,6 +48,7 @@ public class MainActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
 
+/*
         epAyncTask2 = new EndpointsAsyncTask2();
         epAyncTask2.setListener(new EndpointsAsyncTask2.EndpointsListener2() {
             @Override
@@ -63,6 +64,7 @@ public class MainActivityFragment extends Fragment {
 
             }
         }).execute("Manfred2");
+*/
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
@@ -75,6 +77,8 @@ public class MainActivityFragment extends Fragment {
 
         return root;
     }
+
+
 
 
 
