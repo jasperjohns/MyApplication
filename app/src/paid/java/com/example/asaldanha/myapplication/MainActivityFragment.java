@@ -12,8 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.displayjoke.DisplayJokeActivity;
+/*
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+*/
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
